@@ -32,12 +32,9 @@ The purpose of this repository is to demonstrate practical experience in inciden
 
 ## Case Studies
 
-| Case    | Topic                                       | Skills Demonstrated                         |
-| ------- | ------------------------------------------- | ------------------------------------------- |
-| Case 01 | Account Migration Failure                   | SQL, Data Validation, Customer Support      |
-| Case 02 | Payment Successful But Account Not Credited | Transaction Investigation, Log Analysis     |
-| Case 03 | Missing Race Card Investigation             | Data Verification, Cross-Team Collaboration |
-| Case 04 | Early Closing Signal Investigation          | Production Monitoring, Root Cause Analysis  |
+| Case    | Description | 
+| ------- | ------------------------------------------- | 
+| Case 01 | Deposited funds were not reflected in the account balance.| 
 
 
 ## Disclaimer
