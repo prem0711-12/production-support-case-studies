@@ -28,17 +28,7 @@ The purpose of this repository is to demonstrate practical experience in inciden
 * Internal Administration Tools
 * Log Monitoring & Analysis
 
-## Investigation Methodology
 
-Each case study follows a structured troubleshooting approach:
-
-1. Incident Summary
-2. Problem Identification
-3. Investigation Process
-4. Evidence & Findings
-5. Root Cause Analysis
-6. Resolution
-7. Lessons Learned
 
 ## Case Studies
 
