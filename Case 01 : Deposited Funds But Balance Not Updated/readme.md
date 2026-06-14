@@ -14,7 +14,6 @@ GCP Logs | MySQL | Cassandra | Internal Service
 
 ## Step 1 - GCP Logs
 
-Objective:
 -  To verify whether the deposit request was received, I checked GCP Logs after adjusting for the customer's timezone.
 -  The logs showed a NullPointerException during the MercadoPay callback — paymentId was returning null.
 
