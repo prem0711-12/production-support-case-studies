@@ -28,8 +28,7 @@ Screenshot:
 
 
 
--  Query run against payment_info table to retrieve transaction history for the affected player. 
--  Results showed 2 deposits with txn_res_status = INITIATED (never completed), confirming the balance was not updated.
+-  Query run against payment_info table to retrieve transaction history for the affected player. Results showed 2 deposits with txn_res_status = INITIATED (never completed), confirming the balance was not updated.
 
   
 
