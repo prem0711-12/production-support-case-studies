@@ -39,3 +39,20 @@ Observation:
 - 2 rows found with paymentstatus = PENDING
 - txnid = null on both records
 - This confirmed the payment gateway did not return a successful transaction ID, leaving both deposits stuck in PENDING state.
+
+## Step 4 — Development Team Escalation & Root Cause
+
+Since this was a live production issue affecting a customer's balance, I did not spend additional time on further investigation. After completing checks across GCP Logs, MySQL, and Cassandra, I summarized my findings and escalated to the development team via Slack.
+As the incident occurred after working hours with no immediate response on the channel, I waited 10 minutes before directly calling the on-call developer to ensure it was picked up without further delay.
+
+Developer Finding:
+-  After reviewing the logs and payment flow, the developer confirmed the root cause — the payment gateway had sent a callback to our system with paymentId returning as null. Since our application requires a valid paymentId to proceed with processing, the transaction was rejected internally and remained stuck in PENDING state in both MySQL and Cassandra.
+
+Resolution:
+
+The payment gateway team was notified about the null paymentId being returned in their callback response. They acknowledged the issue and applied a fix on their end.
+
+Additional Context — GCP Alerting:
+
+-  During this investigation it was also noted that our GCP alerting system had already flagged this error before the customer reached out. Our applications running on GCP are connected to Slack via alerting policies — when specific critical keywords such as error appear in application logs, an automatic notification is sent to the designated Slack channel along with the application name.
+-  This means the issue was visible in our monitoring before it was reported — something worth noting for future incident response timing.
