@@ -32,9 +32,10 @@ The purpose of this repository is to demonstrate practical experience in inciden
 
 ## Case Studies
 
-| Case    | Description | 
-| ------- | ------------------------------------------- | 
-| Case 01 | Deposited funds were not reflected in the account balance.| 
+| Case    | Description | URL|
+| ------- | ------------------------------------------- |--------| 
+| [Case 01](./Case%2001%20:%20Deposited%20Funds%20But%20Balance%20Not%20Updated) | Deposited funds were not reflected in the account balance.|
+| [Case 02](./Case%2002%20:%20BalancevSync%20Failure%20and%20Tote%20Betting%20Access%20Lost%20After%20Migration) | Balance Sync Failure and Tote Betting Access Lost After Migration | 
 
 
 ## Disclaimer
