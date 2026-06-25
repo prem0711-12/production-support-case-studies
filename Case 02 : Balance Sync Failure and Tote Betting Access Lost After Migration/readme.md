@@ -22,7 +22,21 @@ CRM | Firebase | MySQL | Tote API (Postman) | Slack
 
 <img width="1386" height="458" alt="Legacy_Player_check" src="https://github.com/user-attachments/assets/387826e1-3b37-4b8a-bfd9-ef1ba974a9ec" />
 
-## Step 2 — Multiple Account Discovery (CRM)
+## Step 2 — Client Update & Account Confusion Identified (Slack)
+
+<img width="549" height="639" alt="Further_discussion_with_cilent" src="https://github.com/user-attachments/assets/7781fa7c-ae0e-4203-9f08-60f3177f0186" />
+
+
+-  The client informed us via Slack that the customer had attempted to log in but was shown an account deactivated message. The customer had since logged in using new credentials, had funded the new account, but remained unable to place any bets.
+-  The client also confirmed that the customer had other accounts on the system.
+-  After reviewing all findings from the investigation, the root cause of the betting access issue was identified and communicated back to the client — this was      not a system error but a result of how the player had set up their accounts:
+  -  The customer had visited the website and created a new account using a new email address and password — these new website credentials are not linked to the        tote system and cannot be used for phone betting.
+  -  The customer's original tote account had not been migrated to the new website. Until the migration is completed using the original tote credentials, phone         betting through the tote system remains inaccessible.
+This explanation was provided after completing the full account investigation detailed in the steps below.
+
+
+
+## Step 3 — Multiple Account Discovery (CRM)
 
 -  Further investigation using the player's SSN linked to the legacy account revealed that the player had created two additional accounts on the new website using different email addresses — separate from their original legacy account.
 -  Account 1 — Created on Jun 11, 2026 at 23:06:25. Status: Approved. Registration Progress: Password step completed.
@@ -37,7 +51,7 @@ Screenshot 2
 Screenshot 3
 <img width="991" height="82" alt="Account1_status" src="https://github.com/user-attachments/assets/dfaeda36-f429-43d1-a6d1-fc3193f3dc10" />
 
-## Step 3 — Migration Status Confirmed via MySQL (DBeaver)
+## Step 4 — Migration Status Confirmed via MySQL (DBeaver)
 
 -  To double-confirm the migration status at the database level, a query was run against the ut_migration_data table using the player's tote account ID.
 -  Result returned migration = 0 — confirming the player had not been migrated in the system database, consistent with what the CRM showed.
