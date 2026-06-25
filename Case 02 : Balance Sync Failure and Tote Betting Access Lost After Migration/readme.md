@@ -1,4 +1,4 @@
-<img width="1886" height="990" alt="Account_Check_DB(MYSQL)" src="https://github.com/user-attachments/assets/642e9554-7bbd-47d2-ad2c-24fb5a9fd2d1" /># Balance Sync Failure & Tote Betting Access Lost After Website Migration
+# Balance Sync Failure & Tote Betting Access Lost After Website Migration
 
 ## Customer Report
 
@@ -32,13 +32,9 @@ CRM | Firebase | MySQL | Tote API (Postman) | Slack
 
 Screenshot 1 
 <img width="998" height="149" alt="Account_1" src="https://github.com/user-attachments/assets/87414caf-1a62-45ad-8ba1-43297e25033f" />
-
 Screenshot 2 
-
 <img width="1001" height="152" alt="Account_2" src="https://github.com/user-attachments/assets/db269886-e4a4-4591-b575-6f5846071cd0" />
-
 Screenshot 3
-
 <img width="991" height="82" alt="Account1_status" src="https://github.com/user-attachments/assets/dfaeda36-f429-43d1-a6d1-fc3193f3dc10" />
 
 ## Step 3 — Migration Status Confirmed via MySQL (DBeaver)
