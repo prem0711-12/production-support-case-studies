@@ -77,9 +77,14 @@ WHERE umd.tote_acc_id = [tote_account_id];
 
 **Screenshot 1 — Tote API Balance Verification (Postman)**
 
-![Tote API Balance Verification]<img width="1498" height="956" alt="Verfied_With_Actual_Tote_V1" src="https://github.com/user-attachments/assets/d2a2a608-4206-42f3-8cc9-b51aaf3c37ba" />
+<img width="1498" height="956" alt="Verfied_With_Actual_Tote_V1" src="https://github.com/user-attachments/assets/d2a2a608-4206-42f3-8cc9-b51aaf3c37ba" />
+
+**Screenshot 2 — Wallet Balance in CRM Admin**
 
 <img width="1313" height="784" alt="Balance_Verification_Tenant_admin_V1" src="https://github.com/user-attachments/assets/675c358d-dba5-4f81-a967-4a40fc3ca402" />
+
+**Screenshot 3 — Firebase Firestore Wallet Value**
+
 <img width="1858" height="970" alt="Balance_verification_on_Firebase" src="https://github.com/user-attachments/assets/34d35999-6ff6-4369-88c6-795a7a506c46" />
 
 
