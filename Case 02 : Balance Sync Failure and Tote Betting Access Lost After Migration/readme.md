@@ -32,7 +32,8 @@ CRM | Firebase | MySQL | Tote API (Postman) | Slack
 -  After reviewing all findings from the investigation, the root cause of the betting access issue was identified and communicated back to the client — this was      not a system error but a result of how the player had set up their accounts:
   -  The customer had visited the website and created a new account using a new email address and password — these new website credentials are not linked to the        tote system and cannot be used for phone betting.
   -  The customer's original tote account had not been migrated to the new website. Until the migration is completed using the original tote credentials, phone         betting through the tote system remains inaccessible.
-This explanation was provided after completing the full account investigation detailed in the steps below.
+
+-  This explanation was provided after completing the full account investigation detailed in the steps below.
 
 
 
