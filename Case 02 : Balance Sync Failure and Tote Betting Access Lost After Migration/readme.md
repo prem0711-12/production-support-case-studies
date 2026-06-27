@@ -45,12 +45,19 @@ CRM | Firebase | MySQL | Tote API (Postman) | Slack
 -  One of the accounts was found to be Deactivated by the player after creation.
 -  This confirmed the player had 3 accounts in total — 1 legacy (not migrated) + 2 new website accounts (1 active, 1 deactivated).
 
-Screenshot 1 
+**Screenshot 1 — Account 1**
+ 
 <img width="998" height="149" alt="Account_1" src="https://github.com/user-attachments/assets/87414caf-1a62-45ad-8ba1-43297e25033f" />
-Screenshot 2 
+
+**Screenshot 2 — Account 2**
+
 <img width="1001" height="152" alt="Account_2" src="https://github.com/user-attachments/assets/db269886-e4a4-4591-b575-6f5846071cd0" />
-Screenshot 3
+
+**Screenshot 3 — Account 1: Status - Deactivated**
+
 <img width="991" height="82" alt="Account1_status" src="https://github.com/user-attachments/assets/dfaeda36-f429-43d1-a6d1-fc3193f3dc10" />
+
+
 
 ## Step 4 — Migration Status Confirmed via MySQL (DBeaver)
 
