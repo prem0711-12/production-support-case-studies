@@ -75,7 +75,9 @@ WHERE umd.tote_acc_id = [tote_account_id];
 -  To verify the actual balance held on the tote side, a POST request was made via Postman using the fetch balance endpoint under the account collection — the API response returned ```<Balance>213.24</Balance>```.
 -  This confirmed a sync discrepancy — Firebase was holding a stale value of $211.14 while the actual tote balance was $213.24.
 
-<img width="1498" height="956" alt="Verfied_With_Actual_Tote_V1" src="https://github.com/user-attachments/assets/d2a2a608-4206-42f3-8cc9-b51aaf3c37ba" />
+**Screenshot 1 — Tote API Balance Verification (Postman)**
+[Tote API Balance Verification]<img width="1498" height="956" alt="Verfied_With_Actual_Tote_V1" src="https://github.com/user-attachments/assets/d2a2a608-4206-42f3-8cc9-b51aaf3c37ba" />
+
 <img width="1313" height="784" alt="Balance_Verification_Tenant_admin_V1" src="https://github.com/user-attachments/assets/675c358d-dba5-4f81-a967-4a40fc3ca402" />
 <img width="1858" height="970" alt="Balance_verification_on_Firebase" src="https://github.com/user-attachments/assets/34d35999-6ff6-4369-88c6-795a7a506c46" />
 
