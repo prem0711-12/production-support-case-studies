@@ -65,4 +65,34 @@ WHERE umd.tote_acc_id = [tote_account_id];
 -  1 row fetched. migration column = 0, migrated_at = NULL — no migration record exists for this player.
 
   <img width="1886" height="990" alt="Account_Check_DB(MYSQL)" src="https://github.com/user-attachments/assets/574ba8f8-b301-4289-8b8d-c076a250e3d3" />
+  
+## Step 5 — Balance Mismatch Identified (Firebase vs CRM vs Tote API)
+
+-  While investigating the active account, the wallet balance displayed on the website did not match the actual balance held in the tote system.
+-  Checked the player's wallet directly in Firebase Firestore under the CUSTOMERS → WALLET path — Firebase showed drawAmt: 211.14.
+-  Checked the same player's wallet in the CRM admin panel under the Wallets tab — balance showed $213.24, confirmed as Primary, Active, FIAT wallet.
+-  To verify the actual balance held on the tote side, a POST request was made via Postman using the fetch balance endpoint under the account collection — the API response returned ```<Balance>213.24</Balance>```.
+-  This confirmed a sync discrepancy — Firebase was holding a stale value of $211.14 while the actual tote balance was $213.24.
+
+<img width="1498" height="956" alt="Verfied_With_Actual_Tote" src="https://github.com/user-attachments/assets/b17fae5a-7b71-41ef-8e92-e946907e7cd6" />
+<img width="1313" height="784" alt="Balance_Verification_Tenant_admin" src="https://github.com/user-attachments/assets/185e1178-f6bc-41c0-b510-b5f252ac533f" />
+<img width="1858" height="970" alt="Balance_verification_on_Firebase" src="https://github.com/user-attachments/assets/34d35999-6ff6-4369-88c6-795a7a506c46" />
+
+
+## Step 6 — Balance Sync & Resolution
+
+-  The wallet balance displayed on the website ($211.14 in Firebase) did not match the actual balance confirmed via the CRM admin panel and Tote API ($213.24).
+-  Since the wallet is managed externally and cannot be modified directly from the admin panel, the "Sync Wallets" button available in the CRM was used to manually trigger a balance sync.
+-  After the sync, the website balance updated to reflect the correct amount of $213.24, resolving the display mismatch without any developer escalation.
+
+#  Root Cause Summary:
+
+##  Issue A 
+Balance Mismatch: Firebase was holding a stale wallet value that had not synced with the actual tote balance. Resolved via manual wallet sync triggered from the CRM admin panel.
+
+##  Issue B 
+
+Phone Betting Access: The customer's legacy tote account had never been migrated to the new website. Instead, the customer created two new accounts using an email address that was previously associated with their original tote account, which remained unmigrated. As a result, the new accounts were not linked to the original tote credentials, making phone betting through the tote system inaccessible. The client was advised that the customer must first migrate their legacy account using their original tote credentials — once migration is complete, their original tote account ID will be active on the new platform and phone betting access will be restored.
+
+  
 
